@@ -1,0 +1,165 @@
+body {
+    /*font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    /*background: #79a8ae;*/
+    /*color: #666;*/
+    /*font-size: 16px;*/
+    /*line-height: 1.5em;*/
+
+}
+.canvas{
+    width:100%; !important;
+    height:99%; !important;
+}
+h1 {
+    color: #111;
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
+a:hover {
+    border-bottom-color: #888;
+}
+
+body,
+.overlay {
+    -webkit-perspective: 1000;
+    -webkit-perspective-origin-y: 25%;
+}
+
+.body--ready {
+    /*/Ideas*/
+    /*background: -webkit-linear-gradient(top, #e2b986 -10%, #241c35 140%);*/
+    /*background: -webkit-linear-gradient(top, #c97369 -40%, #241c35 130%);*/
+    background: -webkit-linear-gradient(top, rgb(245,132,132) -10%, rgb(245,132,132) 140%);
+    /*background: -webkit-linear-gradient(top, #519ab0 0%, #414A6D 110%);*/
+    /*background: -webkit-linear-gradient(top, rgb(129, 0, 170) 0%, rgb(43, 4, 114) 110%);*/
+    /*background: -webkit-linear-gradient(top, rgb(163, 235, 189) 0%, rgb(16, 93, 145) 110%);*/
+    /*background: -webkit-linear-gradient(top, rgb(165, 103, 189) 0%, rgb(75, 233, 214) 120%);*/
+
+
+    /*background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
+    /*background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
+    /*background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
+    /*background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
+    /*background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);*/
+}
+
+.body--ready .overlay {
+    -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+    opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    -moz-transition: -moz-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+    opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    -ms-transition: -ms-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+    opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    -o-transition: -o-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+    opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    transition: transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1),
+    opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.help{
+    display:none
+}
+.ui {
+    display:none;
+}
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 490px;
+    margin: -260px 0 0 -275px;
+    opacity: 0;
+
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+}
+
+.overlay--visible {
+    opacity: 1;
+
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+
+
+
+
+.twitter-share {
+    position: absolute;
+    top: 4px;
+    right: 20px;
+}
+
+
+.tabs-labels {
+    margin-bottom: 9px;
+    display:none;
+}
+
+.tabs-label {
+    display: inline-block;
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    opacity: .5;
+    cursor: pointer;
+    margin-right: 2px;
+
+    -webkit-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    -moz-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    -ms-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    -o-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+
+.tabs-label:hover {
+    opacity: .9;
+}
+
+.tabs-label--active {
+    opacity: .9;
+}
+
+.tabs-panel {
+    display: none;
+}
+
+.tabs-panel--active {
+    display: block;
+}
+
+.tab-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.touch .ui-input {
+    display: none;
+}

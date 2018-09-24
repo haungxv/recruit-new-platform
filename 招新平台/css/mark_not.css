@@ -1,0 +1,242 @@
+
+/*******************未批改**********************************/
+.mark_not{
+    background:rgb(246,246,246);
+    height:100%;
+    overflow: auto;
+    width:83.5%;
+    margin-left:16.5%;
+}
+.not_grade_1,.not_grade_2{
+    margin-left:3%;
+    border-left:3px solid rgb(246,133,132);
+    color:rgb(245,133,132);
+    letter-spacing: 0.13em;
+}
+.not_grade_1{
+    margin-top:10px;
+}
+.not_grade_1_radius,.not_grade_2_radius{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background:rgb(246,133,132);
+    float:left;
+    margin-left:-11px;
+}
+.not_grade_1_CH,.not_grade_2_CH{
+    font-size:1.1em;
+    font-weight: bold;
+    margin-left:0.5%;
+}
+.not_grade_1_box,.not_grade_2_box{
+    padding-bottom:20px;
+}
+.not_box{
+    font-size:1.1em;
+    margin-left:12%;
+    margin-top:2%;
+    height:25px;
+}
+.not_none{
+    width:25px;
+    height:25px;
+    text-align: center;
+    color:rgb(236,137,137);
+    float:left;
+}
+.not_name,.mark_not_question,.mark_not_mark{
+    float:left;
+    color:rgb(229,93,93);
+}
+.not_name{
+    margin-left: 2%;
+    width:16%;
+    height:30px;
+}
+.mark_not_question{
+    margin-left:5%;
+    width:40%;
+    height:30px;
+}
+.mark_not_mark{
+    border:1px solid;
+    margin-left:5%;
+    text-align:center;
+    width:13%;
+    background:rgb(246,133,132);
+    color:white;
+    border-radius:17.5px;
+    padding-top:4.5px;
+    height:35px;
+    cursor:pointer;
+}
+/**********************************ajax****************************************/
+.not_fade_{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.not_detail_box{
+    background:white;
+
+    left:50%;
+    margin-left:-340px;
+    top:50%;
+    margin-top:-180px;
+    position:fixed;
+    height:400px;
+    width:680px;
+
+
+
+    opacity: 0;
+    transition: all 1s;
+    z-index: -1;
+    transform:rotateY(-45deg);
+
+}
+.not_detail_box.active{
+    z-index:100;
+    opacity:.95;
+    transform:rotateY(0);
+
+}
+
+
+.not_detail_title{
+    background:rgb(246,133,132);
+    color:white;
+    font-size:1.2em;
+    height:50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:200px;
+    margin:0 auto;
+    margin-top:-30px;
+    text-align: center;
+    padding-top:10px;
+}
+.not_detail_content{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    height:200px;
+    width:680px;
+    margin-top:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.not_detail_content div{
+    color:black;
+    font-size:0.95em;
+    text-indent: 2.4em;
+    height:160px;
+    overflow: auto;
+    padding-left:30px;
+    padding-right:30px;
+}
+.not_detail_down{
+    left:50%;
+    margin-left:85px;
+    top:50%;
+    margin-top:90px;
+    position:fixed;
+    height:42px;
+    width:150px;
+}
+.not_detail_down img{
+    cursor:pointer;
+    height:42px;
+    float:left;
+    display:block;
+}
+.not_detail_down .not_detail_down_word{
+    display:block;
+    float:left;
+    margin-left:15px;
+    margin-top:10px;
+    cursor:pointer;
+}
+.not_detail_score_box{
+    border:1px solid white;
+    height:40px;
+}
+.not_detail_score{
+    margin-left:18px;
+    float:left;
+    margin-top:10px;
+}
+input[id*=not_detail_score]{
+    font-size:0.9em;
+    float:left;
+    text-align: center;
+    width:50px;
+    height:25px;
+    margin-left:8px;
+    margin-top:10px;
+    color:rgb(246,133,132);
+}
+#not_detail_score{
+
+}
+.not_score_alert{
+    width:70%;
+    margin-top:12.5px;
+    margin-left:175px;
+    font-size:0.8em;
+    border:1px solid white;
+}
+.not_detail_comment_box{
+    /*border:1px solid black;*/
+}
+.not_detail_comment{
+    margin-left:18px;
+    clear:both;
+    float:left;
+    margin-top:10px;
+}
+textarea[id*=not_detail_comment]{
+    font-size:1.1em;
+    margin-top:10px;
+    margin-left:8px;
+    width:210px;
+    height:38px;
+    color:rgb(246,133,132);
+}
+#not_detail_comment{
+
+}
+.not_detail_2_hand,.not_detail_1_hand{
+    text-align: center;
+    height:32px;
+    width:170px;
+    float:left;
+
+    margin-top:12px;
+    margin-left:100px;
+    background:rgb(246,133,132) ;
+    color:white;
+    line-height:32px;
+    cursor:pointer;
+}
+.not_detail_back{
+    border:1px solid;
+    text-align: center;
+    height:32px;
+    width:170px;
+    float:right;
+    margin-top:12px;
+    margin-right:100px;
+    line-height:32px;
+    cursor:pointer;
+}
+input:focus,textarea:focus{
+    outline: none;
+}
+
+
