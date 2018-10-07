@@ -1,0 +1,79 @@
+
+/*******************排行榜**********************************/
+.rank_right{
+    background:rgb(246,246,246);
+    height:100%;
+    overflow: auto;
+    width:83.5%;
+    margin-left:16.5%;
+}
+.grade_1,.grade_2{
+    margin-left:3%;
+    border-left:3px solid rgb(246,133,132);
+    color:rgb(245,133,132);
+}
+.grade_1{
+    margin-top:10px;
+}
+.grade_1_radius,.grade_2_radius{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background:rgb(246,133,132);
+    float:left;
+    margin-left:-11px;
+}
+.grade_1_CH,.grade_2_CH{
+    font-size:1.1em;
+    font-weight: bold;
+    margin-left:0.5%;
+}
+.grade_1_box,.grade_2_box{
+    padding-bottom:20px;
+}
+.rank_box{
+    font-size:1em;
+    margin-left:12%;
+    margin-top:2%;
+    height:25px;
+}
+.rank_circle{
+    background-color: rgb(154,85,85);
+    color:white;
+    text-align: center;
+    width:25px;
+    height:25px;
+    line-height:25px;
+    border-radius: 12.5px;
+    float:left;
+    position: relative;
+}
+
+.rank_none{
+    width:25px;
+    height:25px;
+    text-align: center;
+    color:rgb(236,137,137);
+    float:left;
+}
+.rank_name,.rank_number,.rank_score{
+    float:left;
+    color:rgb(229,93,93);
+    letter-spacing: 0.13em;
+}
+.rank_name{
+    margin-left: 2%;
+    width:20%;
+    height:25px;
+}
+.rank_number{
+    margin-left:5%;
+    width:25%;
+    height:25px;
+}
+.rank_score{
+    margin-left:5%;
+    width:20%;
+    height:25px;
+}
+

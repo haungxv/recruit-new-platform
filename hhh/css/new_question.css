@@ -1,0 +1,380 @@
+
+/*******************题目**********************************/
+.question_right{
+    background:rgb(246,246,246);
+    height:100%;
+    overflow: auto;
+    width:83.5%;
+    margin-left:16.5%;
+}
+.easy,.middle,.difficult{
+    margin-left:3%;
+    border-left:3px solid rgb(246,133,132);
+    color:rgb(245,133,132);
+    letter-spacing: 0.13em;
+}
+.easy{
+    margin-top:10px;
+}
+.easy_CH,.middle_CH,.difficult_CH{
+    font-size:1.1em;
+    font-weight: bold;
+    margin-left:0.5%;
+}
+.easy_radius,.middle_radius,.difficult_radius{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background:rgb(246,133,132);
+    float:left;
+    margin-left:-11px;
+}
+.easy_question,.middle_question,.difficult_question{
+    padding-bottom:20px;
+    margin-top:1%;
+    margin-left:7%;
+    /*perspective: 200px;*/
+}
+.easy_question_,.middle_question_,.difficult_question_{
+    margin-left:1%;
+    margin-top:2%;
+    font-size:1.05em;
+}
+.easy_question_CH,.middle_question_CH,.difficult_question_CH{
+    display:block;
+    float:left;
+    letter-spacing: 0.1em;
+}
+.easy_question_detail,.middle_question_detail,.difficult_question_detail{
+    margin-left:43%;
+    border:1px solid;
+    width:12%;
+    height:34px;
+    border-radius: 17px;
+    text-align: center;
+    padding-top:3.4px;
+    background:rgb(246,133,132);
+    color:white;
+    cursor:pointer;
+}
+/****************************************ajax**********************************/
+.fade_{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.detail_box{
+    background:white;
+    left:50%;
+    margin-left:-340px;
+    top:50%;
+    margin-top:-180px;
+    position:fixed;
+    height:370px;
+    width:680px;
+
+
+    opacity: 0;
+    transition: all 1s;
+    z-index: -1;
+    transform:rotateY(-45deg);
+
+}
+.detail_box.active{
+    z-index:100;
+    opacity:.95;
+    transform:rotateY(0);
+
+}
+.box_title{
+    background:rgb(246,133,132);
+    color:white;
+    font-size:1.2em;
+    height:50px;
+    width:200px;
+    margin:0 auto;
+    margin-top:-30px;
+    text-align: center;
+    padding-top:10px;
+}
+.box_content{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    height:235px;
+    width:680px;
+    margin-top:20px;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.box_content div{
+    height:185px;
+    padding-left:30px;
+    padding-right:30px;
+    color:black;
+    font-size:0.97em;
+    text-indent: 2.4em;
+    overflow: auto;
+}
+.box_down_1,.box_down_2,.box_down_3{
+    height:65px;
+    width:200px;
+    float:left;
+    margin-top:10px;
+    margin-left:20px;
+}
+.box_down_1 img,.box_down_2 img,.box_down_3 img{
+    cursor:pointer;
+    width:22%;
+    float:left;
+    display:block;
+    margin-left:20px;
+    margin-top:10px;
+}
+.box_down_1 .box_down_word_1,.box_down_2 .box_down_word_2,.box_down_3 .box_down_word_3{
+    display:block;
+    float:left;
+    margin-left:10px;
+    margin-top:20px;
+    cursor:pointer;
+}
+.box_hand_background_easy,.box_hand_background_middle,.box_hand_background_difficult,
+.box_hand_front_easy,.box_hand_front_middle,.box_hand_front_difficult,
+.box_hand_ios_easy,.box_hand_ios_middle,.box_hand_ios_difficult,
+.box_hand_android_easy,.box_hand_android_middle,.box_hand_android_difficult,
+.box_hand_operation_easy,.box_hand_operation_middle,.box_hand_operation_difficult,
+.box_hand_design_easy,.box_hand_design_middle,.box_hand_design_difficult,
+.box_hand_product_easy,.box_hand_product_middle,.box_hand_product_difficult{
+    border:1px solid;
+    text-align: center;
+    height:32px;
+    width:170px;
+    float:left;
+    margin-top:25px;
+    margin-left:50px;
+    background:rgb(246,133,132) ;
+    color:white;
+    line-height:30px;
+    cursor:pointer;
+}
+.mark_mark{
+    border:1px solid;
+    text-align: center;
+    height:32px;
+    width:170px;
+    float:left;
+    margin-top:25px;
+    margin-left:30px;
+    line-height:30px;
+    cursor:pointer;
+}
+.box_back{
+    float:right;
+    width:15px;
+    margin-top:-14px;
+    margin-right:5px;
+    cursor:pointer;
+}
+.form_white{
+    background: white;
+    /*border:1px solid;*/
+    width:80px;
+    height:29px;
+    z-index:101;
+    position:fixed;
+    left:50%;
+    top:50%;
+    margin-top:153px;
+    margin-left:-140px;
+}
+input[type="file"]{
+    position:fixed;
+    left:50%;
+    top:50%;
+    margin-left:-129.5px;
+    margin-top:153px;
+    cursor:pointer;
+    /*border:1px solid red;*/
+}
+input:focus{
+    outline: none;
+}
+/***************************************查看批改详细情况*******************************************/
+.mark_detail_box{
+    background:white;
+    opacity:.95;
+    left:50%;
+    margin-left:-250px;
+    top:50%;
+    margin-top:-180px;
+    position:fixed;
+    height:360px;
+    width:500px;
+    z-index:102;
+    /*border:1px solid black;*/
+
+}
+.mark_detail_title{
+    background:rgb(246,133,132);
+    color:white;
+    position:fixed;
+    left:50%;
+    top:50%;
+    margin-top:-207px;
+    margin-left:-70px;
+    font-size:1.2em;
+    height:50px;
+    width:150px;
+    letter-spacing:0.2em;
+    text-align: center;
+    padding-top:10px;
+}
+.mark_detail_content_{
+    /*border:1px solid blue;*/
+    margin-top:40px;
+    height:275px;
+    overflow: auto;
+}
+
+.mark_detail_many{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    font-size:1em;
+    width:16%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.mark_detail_score{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:1em;
+    width:9%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.mark_detail_comment{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:1.1em;
+    letter-spacing: 80px;
+    text-indent:80px ;
+    width:75%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+
+.mark_detail_many_{
+    border-bottom:1px solid rgb(246,133,132);
+    font-size:0.9em;
+    width:16%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.mark_detail_score_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:0.9em;
+    width:9%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.mark_detail_comment_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:0.8em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width:75%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+    cursor:pointer;
+}
+/*******************************查看评价详情********************************************/
+.mark_detail_comment_box{
+    background:white;
+    color:rgb(246,133,132);
+    left:50%;
+    margin-left:-200px;
+    top:50%;
+    margin-top:-150px;
+    position:fixed;
+    height:300px;
+    width:400px;
+    z-index:104;
+}
+.mark_detail_comment_title{
+    margin:0 auto;
+    height:35px;
+    width:30%;
+    color:white;
+    letter-spacing: 0.1em;
+    font-size:1.05em;
+    margin-top:-20px;
+    text-align: center;
+    line-height:35px;
+    background:rgb(246,133,132);
+}
+.mark_detail_comment_content{
+    border-top:1px solid;
+    border-bottom:1px solid;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:20px;
+    margin-top:10px;
+    height:230px;
+}
+.mark_detail_comment_content div{
+    padding-right:20px;
+    font-size:0.9em;
+    height:200px;
+    text-indent: 2em;
+    overflow: auto;
+    color:black;
+}
+.mark_detail_comment_back{
+    margin:0 auto;
+    height:35px;
+    width:20%;
+    background:white;
+    letter-spacing: 0.1em;
+    font-size:1.05em;
+    text-align: center;
+    line-height:35px;
+    color:rgb(246,133,132);
+    margin-top:3px;
+    cursor:pointer;
+}
+
+
+
+
+.mark_detail_back{
+    letter-spacing: 0.2em;
+    margin:0 auto;
+    width:200px;
+    height:33px;
+    text-align: center;
+    color:rgb(246,133,132);
+    padding-top:4px;
+    cursor:pointer;
+    /*border:1px solid black;*/
+    margin-top:5px;
+}

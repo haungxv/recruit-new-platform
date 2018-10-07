@@ -1,0 +1,469 @@
+
+/*******************已批改**********************************/
+.mark_have{
+    background:rgb(246,246,246);
+    height:100%;
+    overflow: auto;
+    width:83.5%;
+    margin-left:16.5%;
+}
+.have_grade_1,.have_grade_2{
+    margin-left:3%;
+    border-left:3px solid rgb(246,133,132);
+    color:rgb(245,133,132);
+    letter-spacing: 0.13em;
+}
+.have_grade_1{
+    margin-top:10px;
+}
+.have_grade_1_radius,.have_grade_2_radius{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background:rgb(246,133,132);
+    float:left;
+    margin-left:-11px;
+}
+.have_grade_1_CH,.have_grade_2_CH{
+    font-size:1.1em;
+    font-weight: bold;
+    margin-left:0.5%;
+}
+.have_grade_1_box,.have_grade_2_box{
+    padding-bottom:20px;
+}
+.have_box{
+    font-size:1.1em;
+    margin-left:12%;
+    margin-top:2%;
+    height:25px;
+}
+.have_none{
+    width:25px;
+    height:25px;
+    text-align: center;
+    color:rgb(236,137,137);
+    float:left;
+}
+.have_name,.mark_have_question,.mark_have_detail{
+    float:left;
+    color:rgb(229,93,93);
+}
+.have_name{
+    margin-left: 2%;
+    width:16%;
+    height:30px;
+}
+.mark_have_question{
+    margin-left:5%;
+    width:40%;
+    height:30px;
+}
+.mark_have_detail{
+    border:1px solid;
+    margin-left:5%;
+    text-align:center;
+    width:15%;
+    background:rgb(246,133,132);
+    color:white;
+    border-radius:17.5px;
+    padding-top:4.5px;
+    height:35px;
+    cursor:pointer;
+}
+/***********************************ajax***************************************/
+.have_fade_{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.have_detail_box{
+    background:white;
+    left:50%;
+    margin-left:-360px;
+    top:50%;
+    margin-top:-180px;
+    position:fixed;
+    height:360px;
+    width:720px;
+
+
+    opacity: 0;
+    transition: all 1s;
+    z-index: -1;
+    transform:rotateY(-45deg);
+
+}
+.have_detail_box.active{
+    z-index:100;
+    opacity:.95;
+    transform:rotateY(0);
+
+}
+
+
+.have_detail_content_1{
+    border:1px solid white;
+    margin-top:40px;
+    height:275px;
+    overflow: auto;
+}
+.have_box_title{
+    background:rgb(246,133,132);
+    color:white;
+    position:fixed;
+    left:50%;
+    top:50%;
+    margin-top:-207px;
+    margin-left:-100px;
+    font-size:1.2em;
+    height:50px;
+    width:200px;
+    letter-spacing:0.2em;
+    text-align: center;
+    padding-top:10px;
+}
+.have_box_name{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    /*border-left:1px solid rgb(246,133,132);*/
+    font-size:1.1em;
+    width:11%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.have_box_level{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:1.1em;
+    width:12%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.have_box_many{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:1.1em;
+    width:12%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.have_box_score{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:1.1em;
+    width:9%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.have_box_comment{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:1.1em;
+    letter-spacing: 50px;
+    text-indent:50px ;
+    width:37%;
+    height:35px;
+    float:left;
+    text-align:center;
+    line-height:33px;
+}
+.have_box_change{
+    border-top:1px solid rgb(246,133,132);
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    /*border-right:1px solid rgb(246,133,132);*/
+    font-size:1.1em;
+    letter-spacing: 15px;
+    text-indent:15px ;
+    width:19%;
+    height:35px;
+    margin-left:81%;
+    text-align:center;
+    line-height:33px;
+}
+.have_box_name_{
+    font-size:0.9em;
+    border-bottom:1px solid rgb(246,133,132);
+    /*border-left:1px solid rgb(246,133,132);*/
+    width:11%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.have_box_level_{
+    font-size:0.9em;
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    width:12%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.have_box_many_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:0.9em;
+    width:12%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.have_box_score_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:0.9em;
+    width:9%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.have_box_comment_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:0.8em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width:37%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+    cursor:pointer;
+}
+.have_box_do_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    font-size:0.9em;
+    cursor:pointer;
+    width:9.5%;
+    height:34px;
+    float:left;
+    text-align: center;
+    line-height:34px;
+}
+.have_box_change_{
+    border-bottom:1px solid rgb(246,133,132);
+    border-left:1px solid rgb(246,133,132);
+    /*border-right:1px solid rgb(246,133,132);*/
+    font-size:0.9em;
+    cursor:pointer;
+    width:9.5%;
+    height:34px;
+    margin-left:90.5%;
+    text-align: center;
+    line-height:34px;
+}
+.have_box_back{
+    letter-spacing: 0.2em;
+    position:fixed;
+    left:50%;
+    top:50%;
+    margin-top:143px;
+    margin-left:-100px;
+    width:200px;
+    height:33px;
+    text-align: center;
+    color:rgb(246,133,132);
+    padding-top:4px;
+    cursor:pointer;
+}
+
+/*******************************查看评价详情********************************************/
+.have_box_comment_box{
+    background:white;
+    color:rgb(246,133,132);
+    left:50%;
+    margin-left:-200px;
+    top:50%;
+    margin-top:-150px;
+    position:fixed;
+    height:300px;
+    width:400px;
+    z-index:102;
+}
+.have_box_comment_title{
+    margin:0 auto;
+    height:35px;
+    width:30%;
+    color:white;
+    letter-spacing: 0.1em;
+    font-size:1.05em;
+    margin-top:-20px;
+    text-align: center;
+    line-height:35px;
+    background:rgb(246,133,132);
+}
+.have_box_comment_content{
+    border-top:1px solid;
+    border-bottom:1px solid;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:20px;
+    margin-top:10px;
+    height:230px;
+}
+.have_box_comment_content div{
+    padding-right:20px;
+    font-size:0.9em;
+    height:200px;
+    text-indent: 2em;
+    overflow: auto;
+}
+.have_box_comment_back{
+    margin:0 auto;
+    height:35px;
+    width:20%;
+    background:white;
+    letter-spacing: 0.1em;
+    font-size:1.05em;
+    text-align: center;
+    line-height:35px;
+    color:rgb(246,133,132);
+    margin-top:3px;
+    cursor:pointer;
+}
+
+/***************************************修改分数与评语****************************************/
+.have_box_change_box{
+    background:white;
+    color:rgb(246,133,132);
+    left:50%;
+    margin-left:-170px;
+    top:50%;
+    margin-top:-130px;
+    position:fixed;
+    height:260px;
+    width:340px;
+    z-index:102;
+}
+.have_box_change_title{
+    margin:0 auto;
+    height:35px;
+    width:40%;
+    color:white;
+    letter-spacing: 0.1em;
+    margin-top:-18px;
+    text-align: center;
+    line-height:35px;
+    background:rgb(246,133,132);
+}
+input:focus,textarea:focus{
+    outline: none;
+}
+.have_change_m{
+    margin-left:10px;
+    float:left;
+    margin-top:30px;
+}
+input[id*=have_change_m]{
+    font-size:0.9em;
+    float:left;
+    text-align: center;
+    width:50px;
+    height:25px;
+    margin-left:10px;
+    margin-top:30px;
+    color:rgb(246,133,132);
+}
+input::-webkit-input-placeholder{
+    color:rgb(246,133,132);
+    font-size:0.9em;
+}
+textarea::-webkit-input-placeholder{
+    color:rgb(246,133,132);
+    font-size:1.1em;
+}
+input:-moz-placeholder{
+    color:rgb(246,133,132);
+    font-size:0.9em;
+}
+textarea:-moz-placeholder{
+    color:rgb(246,133,132);
+    font-size:1.1em;
+}
+  input::-moz-placeholder{
+    color:rgb(246,133,132);
+      font-size:0.9em;
+}
+textarea::-moz-placeholder{
+    color:rgb(246,133,132);
+    font-size:1.1em;
+}
+  input:-ms-input-placeholder {
+    color:rgb(246,133,132);
+      font-size:0.9em;
+}
+textarea:-ms-input-placeholder{
+    color:rgb(246,133,132);
+    font-size:1.1em;
+  }
+#have_change_m{
+
+}
+.have_change_c{
+    margin-left:10px;
+    clear:both;
+    float:left;
+    margin-top:11px;
+}
+textarea[id*=have_change_c]{
+    font-size:1.1em;
+    float:left;
+    margin-top:11px;
+    margin-left:10px;
+    width:210px;
+    height:60px;
+    color:rgb(246,133,132);
+}
+#have_change_c{
+
+}
+.have_change_2_hand,.have_change_1_hand{
+    clear:both;
+    border:1px solid;
+    margin:0 auto;
+    height:35px;
+    width:38%;
+    color:white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height:35px;
+    background:rgb(246,133,132);
+    border-radius: 10px;
+    margin-top:150px;
+    cursor:pointer;
+}
+.have_change_back{
+    margin:0 auto;
+    height:35px;
+    width:20%;
+    background:white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height:35px;
+    color:rgb(246,133,132);
+    margin-top:8px;
+    cursor:pointer;
+}

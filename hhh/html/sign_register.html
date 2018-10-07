@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创联工作室</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/sign.css"/>
+    <link rel="stylesheet" href="../css/register.css"/>
+</head>
+<body>
+<canvas class="canvas"></canvas>
+<div class="help"></div>
+<div class="ui">
+    <input class="ui-input" type="text"/>
+    <span class="ui-return">↵</span>
+</div>
+<div class="overlay">
+      <span class="twitter-share">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none"></a>
+        <script>!function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");</script>
+      </span>
+
+    <div class="tabs">
+        <div class="tabs-labels"><span class="tabs-label"></span><span class="tabs-label"></span><span
+                class="tabs-label"></span></div>
+        <div class="tabs-panels">
+            <ul class="tabs-panel commands"></ul>
+        </div>
+    </div>
+</div>
+<div class="sign_BIG">
+    <div class="logo_box"><img src="../images/logo.png" id="logo"/></div>
+    <div class="sign_little_BIG">
+        <div class="logo_fade"></div>
+        <div class="people_title">招新平台开发人员名单</div>
+        <img src="../images/bback.png" id="bback_white"/>
+        <div class="logo_box_box">
+            <div class="people_background">
+                <div class="people_photo" id="fmh"></div>
+                <div class="people_name">姓名：付明浩</div>
+                <div class="people_grade">当前年级：大二</div>
+                <div class="people_time">加入创联时间：大一上</div>
+                <div class="people_duty">主要负责招新平台后台方面</div>
+            </div>
+            <div class="people_front_1">
+                <div class="people_photo" id="lhy"></div>
+                <div class="people_name">姓名：李红远</div>
+                <div class="people_grade">当前年级：大二</div>
+                <div class="people_time">加入创联时间：大一下</div>
+                <div class="people_duty">主要负责招新平台前端方面</div>
+            </div>
+            <div class="people_front_2">
+                <div class="people_photo" id="hdx"></div>
+                <div class="people_name">姓名：黄东旭</div>
+                <div class="people_grade">当前年级：大二</div>
+                <div class="people_time">加入创联时间：大一下</div>
+                <div class="people_duty">主要负责招新平台前端方面</div>
+            </div>
+            <div class="people_design">
+                <div class="people_photo" id="zzh"></div>
+                <div class="people_name">姓名：赵子寒</div>
+                <div class="people_grade">当前年级：大二</div>
+                <div class="people_time">加入创联时间：大一下</div>
+                <div class="people_duty">主要负责招新平台页面设计</div>
+            </div>
+        </div>
+
+        <div class="sign_box active">
+            <div class="sign_CH">登 录</div>
+            <div class="sign_EN">SIGN IN</div>
+            <div class="sign">
+                <input type="text" placeholder="USERNAME" id="NAME"/><br/>
+                <input type="password" placeholder="PASSWORD" id="PASSWORD"/><br/>
+            </div>
+            <div class="remember">FORGET PASSWORD</div>
+            <div class="outside1">
+                <div class="log_button">LOG IN</div>
+            </div>
+            <div class="register_button1">REGISTER</div>
+        </div>
+        <div class="register_box">
+            <div class="register_CH">注 册</div>
+            <div class="register_EN">REGISTER</div>
+            <div class="register">
+                <input type="text" placeholder="USERNAME" id="register_NAME"/><br/>
+                <input type="text" placeholder="REALNAME" id="register_REAL"/>
+                <input type="password" placeholder="PASSWORD" id="register_PASSWORD"/><br/>
+                <input type="password" placeholder="COMFIRM PASSWORD" id="register_CONFIRM"/><br/>
+                <input type="text" id="register_PHOTO"><div id="PHOTO"><img src="" onclick="this.src='/captcha?'+Math.random()"></div>
+                <input type="text" placeholder="TEL" id="TEL"/>
+                <div class="outside2">
+                    <div class="phone_text">OBTAIN</div>
+                </div>
+                <input type="text" placeholder="CODE" id="register_CODE"/><br/>
+                <input type="text" placeholder="STUDENT NUMBER" id="register_NUMBER"/><br/>
+            </div>
+            <div class="outside3">
+                <div class="log_button2">LOG IN</div>
+            </div>
+            <div class="back_button">BACK</div>
+        </div>
+        <div class="forget_fade"></div>
+        <div class="forget_box">
+            <div class="forget_CH">重 置 密 码</div>
+            <div class="forget_EN">RESET PASSWORD</div>
+            <div class="forget">
+                <input type="text" id="forget_PHOTO"><div id="forgetPHOTO"><img src="" onclick="this.src='/captcha?'+Math.random()"></div>
+                <input type="text" placeholder="TEL" id="forget_TEL"/>
+                <div class="outside2_">
+                    <div class="forget_phone_text">OBTAIN</div>
+                </div>
+                <input type="text" placeholder="CODE" id="forget_CODE"/><br/>
+                <input type="password" placeholder="PASSWORD" id="forget_PASSWORD"/><br/>
+                <input type="password" placeholder="COMFIRM PASSWORD" id="forget_CONFIRM"/><br/>
+            </div>
+            <div class="outside4_">
+                <div class="log_button2_">HAND IN</div>
+            </div>
+            <div class="back_button_1">BACK</div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/sign.js"></script>
+<script src="../js/sign_ajax.js"></script>
+<script>
+    $(function () {
+        $('.sign_little_BIG').delay(5000).show(0);
+        $("*").keyup(function (event) {
+            if (event.keyCode === 13 || event.keyCode === 32) {
+                $(".sign_little_BIG").show();
+            }
+        });
+    });
+    $(function () {
+        $('#logo').click(function () {
+            if ($(".people_photo").find('img').length > 0) return;
+            else {
+
+                $("#fmh").append("<img src='../images/fmh.jpg'/>");
+                $("#lhy").append("<img src='../images/lhy.jpg'/>");
+                $("#hdx").append("<img src='../images/hdx.jpg'/>");
+                $("#zzh").append("<img src='../images/zzh.jpg'/>")
+            }
+        })
+    })
+
+</script>
+<script src="../js/shape_shifter.js"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18542897-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+</html>

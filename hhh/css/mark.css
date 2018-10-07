@@ -1,0 +1,145 @@
+#app{
+    display:none;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    min-width:1200px;
+}
+.header{
+    height:97px;
+    width:100%;
+    background:rgb(245,133,132);
+    border:1px solid rgb(245,133,132);
+    position:relative;
+}
+.header .image_1{
+    width:150px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:10px;
+}
+.back{
+    font-size:0.95em;
+    letter-spacing: 0.12em;
+    color:white;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom:0;
+}
+
+.header .back{
+    right:20px;
+    height:40px;
+    cursor:pointer;
+}
+.back img{
+    display:block;
+    float:left;
+    width:40%;
+}
+.back .back_{
+    float:left;
+    margin-top:10px;
+}
+.header .welcome{
+    font-size:0.95em;
+    letter-spacing: 0.12em;
+    width:280px;
+    float:right;
+    margin-right:100px;
+    color:white;
+}
+.welcome .welcome_sign{
+    display: block;
+    float:left;
+    height:97px;
+    line-height:97px;
+}
+.header .little_welcome{
+    width:150px;
+    display:block;
+    float:left;
+}
+.header .welcome ul{
+    list-style-type: none;
+    position:absolute;
+}
+.mark_people__{
+    height:47px;
+    font-size:1.1em;
+    background:rgb(245,133,132);
+    cursor:pointer;
+    border:1px solid rgb(245,133,132);
+}
+.mark_people__:first-child{
+    margin-top:25px;
+}
+.header .welcome .mark_people_one{
+    padding-left:3px;
+    padding-right:3px;
+    height:47px;
+    line-height:45px;
+}
+.mark_people{
+    padding-left:3px;
+    padding-right:3px;
+
+    height:47px;
+    line-height:45px;
+}
+.mark_people___{
+    display: none;
+}
+.welcome_on{
+    height:38px;
+    line-height:38px;
+    margin-top:8px;
+    background: white;
+    color:rgb(245,133,132);
+}
+.left{
+    float:left;
+    width: 16.5%;
+}
+.left ul{
+    list-style-type: none;
+}
+.left li{
+    display: block;
+    height:97px;
+    width:100%;
+    padding-top:24.75px;/*通过设置父容器的padding让子div垂直居中*/
+    letter-spacing: 0.13em;
+}
+.left li:not(:last-child){
+    border-bottom:1px solid rgb(255,233,234);
+}
+
+
+/*********************js*********************/
+.left .left_radius{
+    height:47.5px;
+    width:30%;
+    line-height:47.5px;/*通过设置line-height让文字垂直居中*/
+    text-align: center;
+    margin:auto;
+    cursor: pointer;
+    border-radius:23.75px;
+    transition: background-color 0.5s,color 0.5s,width 0.5s;
+
+}
+.left_radius.left_on{
+    width:73%;
+    color:white;
+    border-radius:23.75px;
+    background: rgb(245,133,132);
+}
+
+
